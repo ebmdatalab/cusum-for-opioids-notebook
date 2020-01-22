@@ -24,7 +24,7 @@ SELECT
   percentile
 FROM measures.ccg_data_opioidper1000
 """
-df = bq.cached_read(sql, csv_path='ccg_percentiles.zip')
+df = bq.cached_read(sql, csv_path='../data/ccg_percentiles.zip')
 
 for pct_id, grouped in df.groupby("pct_id"):
     changes = most_change_against_window(grouped.percentile, window=12)
@@ -37,7 +37,7 @@ SELECT
   percentile
 FROM measures.practice_data_opioidper1000
 """
-df2 = bq.cached_read(sql, csv_path='practice_percentiles.zip')
+df2 = bq.cached_read(sql, csv_path='../data/practice_percentiles.zip')
 
 practice_df = pd.DataFrame(columns=["practice_id", "from", "to", "period"])
 for practice_id, grouped in df2.groupby("practice_id"):
