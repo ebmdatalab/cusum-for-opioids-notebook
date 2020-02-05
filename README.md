@@ -4,6 +4,8 @@
 
 Experiments in using our existing CUSUM metholdogy to discover organisations that are quick to change
 
+This repo supports further investigations into opioid prescribing following the Public Health England Prescribed Medicines Review. Full deatils on the background and another approach taken can be seen in the [repo where we have implemented the OpenPrescribing Change Detection python library](https://github.com/ebmdatalab/opioids-change-detection-notebook/) on opioid measures.
+
 ## How to view the notebooks
 
 Notebooks live in the `notebooks/` folder (with an `ipynb`
